@@ -1,4 +1,4 @@
-# Gama XP 31
+# XP 31
 ## Hackers
 
 Oi, pessoal! Tudo bem?

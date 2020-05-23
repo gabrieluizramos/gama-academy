@@ -1,4 +1,4 @@
-# Gama XP 33
+# XP 33
 ## Hackers
 
 Oi, pessoal! Tudo bem?
@@ -14,7 +14,7 @@ Caso queiram entrar em contato comigo, seguem meus contatos:
 - Linkedin: [https://www.linkedin.com/in/gabrieluizramos/](https://www.linkedin.com/in/gabrieluizramos/)
 - Email: gabriel.luiz.ramos@gmail.com
 
-Eu escrevo algumas coisas no meu blog, caso queiram estudar sobre alguns dos tópicos que comentamos (como desenhos em CSS e outras diversas coisas), é só acessar lá [https://gabrieluizramos.com.br/](https://gabrieluizramos.com.br/). Quem quiser assinar a newsletter, ela está disponível no fim de qualquer página dos posts.
+Eu escrevo algumas coisas no meu blog, caso queiram estudar sobre alguns dos tópicos que comentamos (como desenhos em CSS e outras diversas coisas), é só acessar lá [gabrieluizramos.com.br](https://gabrieluizramos.com.br/). Quem quiser assinar a newsletter, ela está disponível no fim de qualquer página dos posts.
 
 Bons estudos e, qualquer coisa é só chamar!! 🚀
 
@@ -30,8 +30,8 @@ R: Acredito que não, mas é algo que vc vai aprimorando com o tempo. É natural
 
 O que você pode fazer é procuar alguns sites com dinâmicas e exercícios com problemas de lógica para resolver. Alguns deles que eu conheço e gosto em particular são esses aqui:
 
-- https://www.hackerrank.com/
-- https://www.codecademy.com/
+- [HackerRank](https://www.hackerrank.com/)
+- [CodeCademy](https://www.codecademy.com/)
 
 
 ---
@@ -41,7 +41,7 @@ O que você pode fazer é procuar alguns sites com dinâmicas e exercícios com 
 
 R: TypeScript tem toda a vantagem de analise e tipagem estática do seu código. Isso evita que você atribua variáveis e parâmetros não esperados, já que JavaScript possui tipagem dinâmica. A questão é que com isso, você traz alguns trabalhos extras também, já que TypeScript não é executado nos navegadores você terá um trabalho de configurar uma rotina de "build" para converter seu código TS em JS. Sem contar que, em alguns cenários, os erros de Typescript não são muito claros.
 
-Um amigo meu recentemente começou uma série sobre introdução ao TypeScript no youtube, de forma totalmente gratuita. Quem tiver interesse de ver, é só acessar: https://www.youtube.com/watch?v=mRixno_uE2o&list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_
+Um amigo meu recentemente começou uma série sobre introdução ao TypeScript no youtube, de forma totalmente gratuita. Quem tiver interesse de ver, é só acessar através [deste link](https://www.youtube.com/watch?v=mRixno_uE2o&list=PLlAbYrWSYTiPanrzauGa7vMuve7_vnXG_).
 
 
 ---
@@ -144,22 +144,21 @@ R: Realmente, eu tb acho que o mercado cobra demais sem necessidade. Acaba cobra
 
 Alguns links e pessoas que eu acho bacana de seguir: 
 
-https://willianjusten.com.br/
-https://flaviocopes.com/
-https://kentcdodds.com/blog/
-https://medium.com/@_ericelliott
-https://www.frontendmentor.io/
+- [Willian Justen](https://willianjusten.com.br/)
+- [Flavio Copes](https://flaviocopes.com/)
+- [Kent C. Dodds](https://kentcdodds.com/blog/)
+- [Eric Elliott](https://medium.com/@_ericelliott)
+- [Front-end Mentor](https://www.frontendmentor.io/)
 
 
 Alguns livos:
-https://leanpub.com/little-javascript/
-https://github.com/braziljs/eloquente-javascript
+- [Little Javascript Book](https://leanpub.com/little-javascript/)
+- [JavaScript Eloquente](https://github.com/braziljs/eloquente-javascript)
 
 Eu mantenho meus estudos e conteúdos que gosto de consultar num repositório do github:
-https://github.com/gabrieluizramos/compile-me
+- [Compile-me](https://github.com/gabrieluizramos/compile-me)
 
-E também tenho meu blog, caso queiram ler:
-https://gabrieluizramos.com.br/
+E também tenho meu blog, caso queiram ler, é só clicar [aqui](https://gabrieluizramos.com.br/).
 
 
 ---
