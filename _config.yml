@@ -1,0 +1,4 @@
+# Just add this file into your github pages repo to apply the desired theme
+# You can check out the available themes at https://pages.github.com/themes/
+
+theme: jekyll-theme-hacker
