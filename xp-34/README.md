@@ -3,9 +3,9 @@
 
 Oi, pessoal! Como estão?
 
-Espero que tenham curtido nossa manhã e espero ter ajudado um pouquinho vocês nesse processo todo. Foi muito bacana poder participar e trocar ideias com vocês!
+Espero que tenham curtido nossas manhãs e espero ter ajudado um pouquinho vocês nesse processo todo. Foi muito bacana poder participar e trocar ideias com vocês!
 
-Essa página contém as respostas das perguntas que vocês fizeram pelo [OneAsk](https://oneask.app/e/xp34x-treinamento1-hacker/5eeccfa3d46eb9b2dac8e590) caso precisem consultar.
+Essa página contém as perguntas feitas pelo OneAsk nos dois dias que batemos um papo.
 
 Se precisarem entrar em contato comigo:
 
@@ -14,7 +14,10 @@ Se precisarem entrar em contato comigo:
 
 Bons estudos! Se precisarem é só chamar!! 🚀
 
----
+
+### Dia 1
+
+Essa página contém as respostas das perguntas que vocês fizeram pelo [OneAsk](https://oneask.app/e/xp34x-treinamento1-hacker/5eeccfa3d46eb9b2dac8e590).
 
 1) Poderia compartilhar sites, dicas para treinar js?
 
@@ -141,3 +144,285 @@ console.log(formataData(new Date()))
 9) O que eu posso fazer tanto com JavaScript? quais são meus limites?
 
 R: Não tem bem um limite para o que podemos fazer. Podemos utilizar JS para implementar o que quisermos no navegador ou no servidor.
+
+---
+
+### Dia 2
+Perguntas feitas através do [OneAsk da turma X](https://oneask.app/e/xp34x-treinamento1-hacker/5eeccfa3d46eb9b2dac8e590) e do [OneAsk da turma P](https://oneask.app/e/xp34p-treinamento1-hacker/5eecd52bd46eb99382c8e599).
+
+#### Turma X
+
+---
+
+1) quando eu devo utilizar react para construir um site ao inves de html e css?
+
+R: Pra responder a essa pergunta, precisamos levar em consideração alguns pontos. Geralmente essas ferramentas, bibliotecas e frameworks (React, Vue, Angular) abstraem e facilitam algumas coisas pra gente, como gerenciamento de estado, manipulação do DOM, trazem uma padronização aos nossos componentes e pra nossa interface em geral.
+
+No fim, tudo é HTML, CSS e JS, a diferença é que esses frameworks trabalham justamente com abstrações diferentes e caem como uma luva em cenários onde você tem diversas pessoas trabalhando em uma mesma aplicação (ou em diversas aplicações diferentes). Fica muito mais fácil de manter uma consistência entre sua equipe e seu código em geral, principalmente conforme sua aplicação cresce.
+
+Para um projeto ou algo simples, utilizar alguma dessas ferramentas pode ser um trabalho e uma complexidade extra mas, dependendo da necessidade do seu projeto, essa complexidade acaba trazendo diversos outros ganhos.
+
+---
+
+2) pode explicar melhor sobre o metodo append child?
+
+R: Ele basicamente serve para inserir um novo elemento filho (por isso "append child"), em um elemento já existente no DOM.
+
+O trecho de código abaixo cria dois elementos (`p` e `span`) e insere eles em um body em uma página. Se quiser, pode testar:
+
+```js
+const p = document.createElement('p');
+p.textContent = 'Parágrafo criado via JS';
+
+const span = document.createElement('span');
+span.textContent = 'Span criado via JS';
+
+document.body.appendChild(p);
+document.body.appendChild(span);
+```
+
+---
+
+3) quando tentei importar o Link do react-router-dom não consegui, mesmo seguindo os direcionamentos da aula, obtive o erro que dizia "'Link' is not exported from './styled' (imported as 'S')." O que isso quer dizer?
+
+R: Me parece que é algum erro no seu import em si. Pelo que está escrito, acho que algum import/export não está correto como deveria.
+
+---
+
+4) qual a diferença entre usar == e === ?
+
+R: Costumamos dizer que `==` verifica apenas os valores em uma comparação (por isso `'1' == 1` é `true`, já que os valores são iguais) e `===` verifica também o tipo desse valor (por isso `'1' === 1` é `false`, pois um é `number` e outro é `string`).
+
+O fundamento por trás disso é um pouco mais complexo, chamado `coerção de tipos` (processo que ocorre com o `==` e com o `===` não). Acho que pode ser uma boa leitura extra!
+
+Vale lembrar que para objetos e arrays, os valores nunca serão iguais, pois as referências de memórias são diferentes, ou seja, `{} === {}` e `[] === []` nunca serão true pq são arrays e objetos com referências de memória diferentes.
+
+---
+
+5) Se react é voltado para area frontend e backend , tem outras coisas que o react pode fazer? porque estudar html css se o React é voltado para front? Se aprofundarmos no react qual seria a profissão correta , desenvolvedor fullstack?
+
+R: Como a [própria página oficial do React](https://reactjs.org/) fala, é uma biblioteca para criar interfaces de usuário. Você pode até utilizar React do lado do servidor (com *server-side rendering*), mas é diferente de um desenvolvimento de uma API por exemplo, de uma consulta em um banco de dados ou algo do tipo. Em muitos lugares, ser fullstack significa ter um conhecimento sobre o front e também sobre o back, coisa que somente o React não traz.
+
+---
+
+6) spa, significa uma unica pagina?
+
+R: Sim e não... A sigla SPA significa `single page application` ou `aplicação de página única` e, embora a tradução queira dizer isso, não quer dizer que sua aplicação terá somente uma página, mas sim que aquela requisição tradicional onde toda a tela é recarregada para que uma nova página seja exibida ocorrerá somente uma vez (por isso `single page`). A ideia com aplicações `SPA` é que as demais requisições sejam feitas sem a necessidade desse recarregamento (através de requisições assíncronas utilizando `AJAX`/`fetch`).
+
+Se tiver interesse em entender um pouco mais sobre as diferentes renderizações em React (e de aplicações em geral), escrevi [um post sobre isso](https://gabrieluizramos.com.br/renderizacao-de-aplicacoes-modernas) há um tempo.
+
+---
+
+7) o que significa lib, de um exemplo
+
+R: `lib` quer dizer `library`, que quer dizer `biblioteca`. Uma `biblioteca` é um dos muitos termos utilizado para explicar um trecho de código que pode ser reutilizado em diversas necessidades.
+O próprio React é uma lib, assim como diversas outras no mercado.
+
+Outros termos utilizados podem ser `módulos`, `pacotes`, `dependências`...
+
+---
+
+#### Turma P
+
+---
+
+8) Quando é indicado usar React? Como é a integração com outras frameworks como bootstrap e etc? E por fim, é viável criar somente com react um site ou ele é uma ferramenta especifica para uma funcionalidade?
+
+R: Não tem uma única resposta para essa perguntar. Optar por utilizar alguma biblioteca ou framework é uma decisão que envolve analisar o contexto do projeto, contexto do time, familiaridade da equipe com a ferramenta e diversas outras coisas.
+
+Geralmente essas ferramentas mais utilizadas (React, Vue, Angular) possuem implementações de outras ferramenta prontas para utilizar (como o Bootstrap), caso não consiga utilizá-la de forma tão simples.
+
+É viável criar um site só com React sim! [Meu site](http://gabrieluizramos.com.br/), inclusive, foi feito com React, você pode até olhar o [código fonte](https://github.com/gabrieluizramos/gabrieluizramos.github.io) se quiser!
+
+---
+
+9) Opa, boa tarde. Quando criei a aplicação React, na aula mostrou a exclusão de alguns arquivos desnecessários. Baseando na lista que apareceu, exclui os mesmos arquivos e aqui deu erro. Quais os locais deve remover as referências para parar o erro? Removi onde encontrei, mas o erro persistiu!
+
+R: Acho que esse problema foi bem voltado à aula em específico. Não tenho muito como ajudar, mas uma dica que sempre é válida quando algum erro persiste é tentar limpar os dados da sua aplicação no navegador (no Chrome é na aba `Application`) e reiniciar sua aplicação também.
+
+---
+
+10) Opa, boa tarde. Sobre o React, na promisse, ao fazer o desestruct passa somente o valor "repository.name". Eu até tentei passar o array completo e para apresentar na tela de repositórios e não consegui! Pode explicar como pode ser feito o desestruct de todos os itens do array?
+
+R: Destructuring de array (diferente de objetos, que possuem chaves) é algo sequencial, já que um array tem seus valores ordenados por posições. O exemplo abaixo mostra a destruturação de um array e de um objeto para relembrar a diferença:
+
+```js
+// Exemplo com array
+const gatos = ['Lora', 'Logan', 'LeBeau'];
+
+const [primeiro, segundo, terceiro] = gatos;
+console.log(primeiro); // 'Lora'
+console.log(segundo); // 'Logan'
+console.log(terceiro); // 'LeBeau'
+
+// Exemplo com objeto
+const pessoa = {
+    nome: 'Gabriel',
+    sobrenome: 'Ramos'
+};
+const { nome, sobrenome } = pessoa;
+console.log(nome) // 'Gabriel'
+console.log(sobrenome) // 'Ramos'
+```
+
+---
+
+11) Pode falar mais sobre State? não peguei bem o assunto.
+
+R: `state` é uma das formas de gerenciar um valor interno à um componente e também manter esse valor atualizado em tela (já que, alterações de estado disparam uma re-renderização no React). Hoje em dia (com os Hooks do React) utilizamos mais componentes de estado através do hook `useState`, mas não é difícil encontrar trechos na internet utilizando componentes com classes para manter um estado interno.
+
+Vale lembrar que com os Hooks conseguimos criar trechos de códigos customizáveis com hooks onde nós definimos estados e efeitos colaterais.
+
+Abaixo deixei aqueles exemplos que comentamos hoje: uma ação de abrir/fechar um menu e um hook customizado para consultar repositórios de usuários.
+
+---
+
+12) Exemplo de estado com menu aberto/fechado, com animação em CSS
+
+- O componente `menu` possui o estado `open` que verifica se está aberto (`true`) ou fechado (`false`);
+- Com o valor desse estado a classe `active` é concatenada e inserida no menu, apenas para fazer a animação via CSS.
+
+
+```jsx
+import React, { useState } from 'react';
+
+import './menu.css';
+
+const Menu = () => {
+    const [open, setOpen] = useState(false);
+
+    const toggleMenu = () => setOpen(!open);
+
+    const menuClasses = `menu ${open ? 'active' : ''}`;
+
+    return (
+        <nav>
+            <button onClick={toggleMenu} className="button">click</button>
+            <ul className={menuClasses}>
+                <li>Home</li>
+                <li>Sobre</li>
+                <li>Produtos</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+    )
+};
+
+
+export default Menu;
+```
+
+```css
+.menu {
+    list-style: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.menu.active {
+    max-height: 1000px;
+}
+
+.button {
+    border: 0;
+    background: tomato;
+    color: white;
+}
+
+.menu li {
+    background: tomato;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+}
+```
+
+---
+
+13) Exemplo do hook customizado que desenvolvemos na nossa conversa.
+- A função `handlePesquisa` apenas formata e retorna os dados de repositórios do usuário;
+- O hook customizado é o `useRepositories`
+- O componente `Tela` chama o hook customizado `useRepositories` informando o nome de usuário.
+
+```jsx
+function handlePesquisa(usuario)
+  return axios.get(`https://api.github.com/users/${usuario}/repos`)
+  .then(response => {
+
+    const repositories = response.data.map((repository) => {
+      return {
+          name: repository.name,
+          date: repository.date
+      };
+    });
+
+    return repositories;
+
+    // localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
+    // setErro(false);
+    // history.push('/repositories');
+  })
+  .catch(err => {
+    // setErro(true);
+  });
+}
+
+const useRepositories = (username) => {
+  const [repos, setRepos] = useState([]);
+
+  useEffect(() => {
+    handlePesquisa(username)
+    .then((repos) => {
+      setRepos(repos)
+    })
+  }, []);
+
+  return [repos];
+}
+
+
+const Tela = () => {
+  const [repos] = useRepositories('gabrieluizramos');
+
+  if (!repos.length) return // ...
+
+  return (
+    // ...
+  );
+}
+```
+
+---
+
+
+14) Pode falar sobre algumas extensões que você usa no VS Code, que considera útil no dia a dia ?
+
+R: Vou listar as que estão instaladas por aqui hoje em dia:
+
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) + [Brazilian Portuguese - Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-portuguese-brazilian): para validar meus arquivos markdown quando escrevo posts;
+- [City Lights Icon](https://marketplace.visualstudio.com/items?itemName=Yummygum.city-lights-icon-vsc): pacote de ícones do editor;
+- [Nord](https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code): tema do meu editor;
+- Debugger for Chrome (padrão da Microsoft): auxilia a debuggar aplicações no Chrome (mas nunca utilizei rs);
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig): permite a visualização das guias e alguns leves ajustes de código ao utilizar um arquivo [.editorconfig](https://editorconfig.org/) no projeto.
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint): integração do ESLint (validação estática de código) no editor;
+- [filesize](https://marketplace.visualstudio.com/items?itemName=mkxml.vscode-filesize): indica o tamanho do arquivo atual;
+- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): indica o tamanho de um arquivo sendo importado;
+- [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles): preview de arquivos markdown;
+- [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx): extensão para arquivos markdown (MD) que utilizam React;
+- [npm Dependency Links](https://marketplace.visualstudio.com/items?itemName=herrmannplatz.npm-dependency-links): facilita o acesso ao site do NPM das dependências listadas no `package.json`;
+- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense): autocomplete de arquivos/pastas;
+- [PHP INtelliSense](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-intellisense): autocomplete de arquivos/pastas para PHP;
+- [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode): para captura de telas de código para inserir em apresentações;
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): formatador de código;
+- Python (padrão da Microsoft): para auxiliar em diversas tarefas para Python;
+- [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode): aquele "playground" de JS para facilitar explicações ao vivo;
+- [Search node_modules](https://marketplace.visualstudio.com/items?itemName=jasonnutter.search-node-modules): para facilitar a pesquisa em arquivos na pasta `node_modules`;
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): para sincronizar todas as minhas preferências do vscode com um gist, no Github, deixando tudo BEM mais fácil na hora de manter meus plugins entre máquinas diferentes ou de formatar e baixar tudo do zero;
+- [SVG Viewer](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer): para visualizar SVG direto no editor;
+- [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight): para deixar as palavras "TODO:" com um highlight para facilitar a leitura ao escrever algo que deve ser feito no futuro em um arquivo.
+
+---
+
+15) Talk sobre processo seletivo e carreira do Guilherme Pendezza: [https://www.youtube.com/watch?v=kdj5UBAEzHE](https://www.youtube.com/watch?v=kdj5UBAEzHE)
