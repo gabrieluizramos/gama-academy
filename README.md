@@ -6,3 +6,4 @@ Conteúdo apresentado e discutido ao longo dos projetos [Gama Experience](https:
 - [xp-31](./xp-31)
 - [xp-33](./xp-33)
 - [xp-34](./xp-34)
+- [talks](./talks)
