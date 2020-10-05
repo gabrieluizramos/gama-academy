@@ -117,7 +117,6 @@ Resolva esse exercício com:
 - Imprime `errow` no console, caso seja `error`;
 - Imprime `status inválido` caso não seja nenhum dos status acima.
 
-
 ### Laços de Repetição
 
 1) Escreva um script que lista todos os dados do array `['Lora', 'Logan', 'LeBeau']`.
@@ -131,6 +130,18 @@ Resolva esse exercício com:
 1) Desenvolva uma função que recebe `nome` e `idade` e retorna a mensagem `Nome de usuário {nome}. Idade {idade}.`
 
 2) Refaça o exercício número `1` do tópico `Arrays` utilizando `Arrow Functions`.
+
+3) O seguinte código irá disparar um erro `onClick is not a function`. Como você o corrigiria?
+```js
+function principal(onClick) {
+    const argumentos = { 
+        mensagem: 'oi'
+    };
+    onClick(argumentos)
+}
+
+principal(null)
+```
 
 ### Funções Construtoras e Classes
 
