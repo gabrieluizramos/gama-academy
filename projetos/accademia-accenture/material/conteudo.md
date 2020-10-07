@@ -2,7 +2,7 @@
 Conteúdo abordado ao longo dos 6 dias
 
 ## Introdução ao JavaScript
-### Dias 1 e 2, totalizando (8h)
+### Dias 1 e 2 (8h)
 - Características da Linguagem
 - Como programar em JavaScript?
 - Variáveis
@@ -45,7 +45,7 @@ Conteúdo abordado ao longo dos 6 dias
     - Servidor
 - Progressive Web-Apps (PWA)
 - Single Page Applications (SPA)
-- NPM
+- Node e NPM
 - Yarn
 - Babel
 - Webpack
@@ -56,21 +56,23 @@ Conteúdo abordado ao longo dos 6 dias
 ### Dias 5 e 6 (8h)
 - Introdução ao TypeScript
 - Instalação e utilização
+- Motivos pelos quais utilizar ou não
 - Tipos básicos
     - String
     - Number
     - Boolean
     - Array
     - Tuple
-    - Enum
     - Unknown
     - Any
     - Void
     - Null e Undefined
     - Never
     - Object
+    - Function
+- Enum
 - Union Type
 - Intersection Type
 - Type Alias
-- Interfaces
+- Interfaces e um pouco de OO
 - Valores opcionais
