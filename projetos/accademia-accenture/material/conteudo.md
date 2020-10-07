@@ -2,7 +2,7 @@
 Conteúdo abordado ao longo dos 6 dias
 
 ## Introdução ao JavaScript
-### Dia 1, totalizando (8h)
+### Dias 1 e 2, totalizando (8h)
 - Características da Linguagem
 - Como programar em JavaScript?
 - Variáveis
@@ -30,8 +30,8 @@ Conteúdo abordado ao longo dos 6 dias
 - Eventos
 - Template string
 - Operador ternário e &&, ||
-- Spread/rest
 - Desestruturação
+- Spread/rest
 - Callbacks
 - Métodos HTTP (GET/POST/PUT/DELETE/PATCH)
 - APIs

@@ -1,4 +1,4 @@
 # Projetos
 
 Alguns projetos extras.
-- [Academia Accenture](./academia-accenture)
+- [Accademia Accenture](./accademia-accenture)
