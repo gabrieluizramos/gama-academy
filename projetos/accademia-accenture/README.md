@@ -1,4 +1,4 @@
-# Academia Accenture
+# Accademia Accenture
 ## Q2/2020
 
 Contém os materiais das aulas relacionadas ao programa. Você pode conferir:
