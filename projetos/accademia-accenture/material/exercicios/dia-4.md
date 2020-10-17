@@ -1,5 +1,11 @@
 # Dia 4
 
+## Single Page Applications
+
+1) O que é uma SPA?
+
+2) Qual a principal diferença de uma SPA para uma aplicação mais "tradicional"? Como elas trafegam dados entre o cliente e o servidor?
+
 ## Node e NPM
 
 1) Conceitualmente, o que é o `Node`, o `NPM` e o `NPX`?
@@ -48,9 +54,3 @@
 1) Para que é utilizada a declaração `debugger;` em um arquivo JavaScript?
 
 2) O que são e para que servem source-maps?
-
-## Single Page Applications
-
-1) O que é uma SPA?
-
-2) Qual a principal diferença de uma SPA para uma aplicação mais "tradicional"? Como elas trafegam dados entre o cliente e o servidor?
