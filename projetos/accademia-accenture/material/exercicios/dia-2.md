@@ -224,12 +224,37 @@ pessoa.exibeGatos() // deverá imprimir no console 'Lora', 'Logan' e 'LeBeau'
 
 1) Crie uma função construtora que recebe `nome` e `gatos` como parâmetro e cria o objeto com a estrutura acima.
 
+```js
+function Pessoa (nome, gatos) {
+    this.nome = nome;
+    this.gatos = gatos;
+    this.exibeGatos = function () {
+        this.gatos.forEach(gato => {
+            console.log(gato)
+        })
+    }
+}
+
+const pessoa = new Pessoa('Gabriel', ['Lora', 'Logan', 'LeBeau']);
+```
+
 2) Crie uma classe que recebe `nome` e `gatos` como parâmetro e cria o objeto com a estrutura acima.
+```js
+class Pessoa {
+    constructor (nome, gatos) {
+        this.nome = nome;
+        this.gatos = gatos;
+    }
 
+    exibeGatos() {
+        this.gatos.forEach(gato => {
+            console.log(gato)
+        })
+    }
+}
 
-## Console
-
-1) Escreva um programa que exibe uma mensagem `iniciando contagem` e começa um contador de tempo. Após isso, esse programa deverá rodar um laço de repetição qualquer indo de 0 até 100 e depois finalizar a contagem, exibindo o tempo total do contador de tempo.
+const pessoa = new Pessoa('Gabriel', ['Lora', 'Logan', 'LeBeau']);
+```
 
 ## Boas práticas e DRY
 
@@ -252,11 +277,28 @@ console.log("Execução finalizada");
 console.log('Obrigado por participar');
 ```
 
+```js
+const nome = 'Gabriel';
+const idade = 24;
+const gatos = [
+    'Loga',
+    'Logan',
+    'LeBeau'
+];
+
+for (let i = 0; i < gatos.length; i++) {
+    console.log(gatos[i]);
+}
+    
+console.log('Execução finalizada');
+console.log('Obrigado por participar');
+```
+
 2) Como podemos abstrair o seguinte código para aplicar _DRY_ de forma coerente?
 ```js
 const arr1 = [1, 2, 3, 4];
 const arr2 = [5, 6, 7, 8];
-const arr3 = [5, 6, 7, 8];
+const arr3 = [8, 9, 10, 11];
 
 const novoArr1 = arr1.map(function (valor) {
     return valor + 1;
@@ -278,106 +320,35 @@ console.log('Array inicial', arr3);
 console.log('Array novo', novoArr3);
 ```
 
----
-
-
-## Formulários
-
-1) Na tag form abaixo, complete o código para conter:
-- 1 input do tipo texto;
-- 1 input do tipo senha;
-- 1 input do tipo email;
-
-Todos os inputs devem possuir seus devidos placeholders.
-```html
-<form>
-</form>
-```
-
-## Eventos
-
-1) Quando se é preferível atribuir eventos através de `addEventListener` e quando se deve utilizar os atributos como `onclick`?
-
-2) Na estrutura HTML que foi criada acima. Atribua um evento para que, ao disparar o formulário, a página não seja recarregada e exiba todos os dados informados no console.
-
-3) Vamos criar uma validação para esse formulário! Crie um objeto chamado `validacoes` que deverá conter como `chave` os tipos dos campos que criamos anteriormente (`text`, `email` e `password`). Para cada uma dessas chaves, conterá como `valor` um array onde conterá algumas funções de validação já pre-estabelecidas, criadas abaixo. Após isso crie uma função `validaFormulario` que receberá um parâmetro `campos`. Esse parâmetro deverá ser um array contendo cada um dos campos do formulário criado.
-
-
 ```js
-const validaQuantidade = (input, minimo = 6) => {
-    const ehValido = input.value.trim().length >= minimo;
+const somaArray = (array, somatoria) => array.map((valor) => valor + somatoria);
 
-    if (!ehValido) {
-        return 'O campo '+ input.name + ' deve conter no mínimo ' + minimo  + ' caracteres';
-    }
-}
-
-const validaEmail = (input) => {
-    const regexp = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
-    const ehValido = regexp.test(input.value);
-
-    if (!ehValido) {
-        return 'O campo ' + input.name + ' não é válido';
-    }
-}
-
-
-// Todos os campos devem aplicar a função validaQuantidade como validação
-// O campo email, deve aplicar também a função validaEmail
-const validacoes = {
-    // preencha o objeto com as validações  
+const exibeArrays = (array, novoArray) => {
+    console.log('Array inicial', array);
+    console.log('Array novo', novoArray);
 };
 
-const validaFormulario = (inputs) => {
-    // crie a função de validação
-    // ela deverá, para cada campo do objeto inputs
-    // executar suas devidas validações e mostre no console as validações após sua execução
-};
+const arr1 = [1, 2, 3, 4];
+const arr2 = [5, 6, 7, 8];
+const arr3 = [8, 9, 10, 11];
 
-// não deverá exibir erro
-validaFormulario([
-    {
-        type: 'text',
-        name: 'username',
-        value: 'gabrieluizramos'
-    },
-    {
-        type: 'password',
-        name: 'senha',
-        value: '123456'
-    },
-    {
-        type: 'email',
-        name: 'usuario',
-        value: 'abc@1234.com.br'
-    }
-]);
+const novoArr1 = somaArray(array, 1);
+const novoArr2 = somaArray(array, 2);
+const novoArr3 = somaArray(array, 3);
 
-// deverá exibir erro em password e email
-validaFormulario([
-    {
-        type: 'text',
-        name: 'usuario',
-        value: 'gabrieluizramos'
-    },
-    {
-        type: 'password',
-        name: 'senha',
-        value: '1234'
-    },
-    {
-        type: 'email',
-        name: 'E-mail',
-        value: 'abc@1234'
-    }
-])
+exibeArrays(arr1, novoArr1);
+exibeArrays(arr2, novoArr2);
+exibeArrays(arr3, novoArr3);
 ```
-
-4) Após finalizar essa função, vamos atribuí-la ao formulário criado.
 
 ## Template Strings
 
-1) Adapte a função de validação anterior para utilizar template strings ao invés de concatenar as variáveis nas strings.
+1) Adapte o exercício 1 do tópico `Funções` para utilizar template strings ao invés de concatenar as variáveis nas strings.
+```js
+const boasVindas = (nome, idade) => `Nome de usuário ${nome}. Idade ${idade}.`;
+
+console.log(boasVindas('Gabriel', 24));
+```
 
 ## Ternário, && e ||
 

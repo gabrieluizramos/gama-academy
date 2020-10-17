@@ -37,3 +37,20 @@
 ## Funções como componentes
 
 1) Pra brincar um pouco com React: crie um projeto utilizando `create-react-app` e, dentro desse projeto, crie um botão que dispare um `alert`.
+
+
+## Console
+
+1) Escreva um programa que exibe uma mensagem `iniciando contagem` e começa um contador de tempo. Após isso, esse programa deverá rodar um laço de repetição qualquer indo de 0 até 100 e depois finalizar a contagem, exibindo o tempo total do contador de tempo.
+
+## Debugging
+
+1) Para que é utilizada a declaração `debugger;` em um arquivo JavaScript?
+
+2) O que são e para que servem source-maps?
+
+## Single Page Applications
+
+1) O que é uma SPA?
+
+2) Qual a principal diferença de uma SPA para uma aplicação mais "tradicional"? Como elas trafegam dados entre o cliente e o servidor?
