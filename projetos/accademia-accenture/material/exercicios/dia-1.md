@@ -4,7 +4,7 @@
 
 2) Desenvolva um script que separe a string `O Rato roeu a roupa do rei de Roma` pelos seus espaços vazios.
 
-3) Complete o script abaixo. Ele deve exibir `true` somente se a categoria da mensagem fro `success`, em casos de `warning` ou `error` deve exibir false:
+3) Complete o script abaixo. Ele deve exibir `true` somente se a categoria da mensagem for `success`, em casos de `warning` ou `error` deve exibir false:
 ```js
 const mensagem1 = '[success] Cadastro concluído com sucesso';
 const mensagem2 = '[warning] Cadastro concluído com sucesso, mas alguns dados estão inconsistentes';
