@@ -1,3 +1,5 @@
+# Dia 6
+
 ## TypeScript
 
 1) Para quê são utilizados os Enums? O que eles geram no código final em JavaScript?

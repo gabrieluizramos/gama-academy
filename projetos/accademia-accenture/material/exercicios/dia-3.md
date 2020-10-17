@@ -1,3 +1,5 @@
+# Dia 3
+
 ## Desestruturação
 
 1) Atualize as funções de validação abaixo para utilizar desestruturação nos seus parâmetros de `input`:

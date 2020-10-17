@@ -1,3 +1,5 @@
+# Dia 5
+
 ## TypeScript
 
 1) O que é o TypeScript? No que ele diferencia do JavaScript?
