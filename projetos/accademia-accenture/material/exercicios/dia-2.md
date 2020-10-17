@@ -104,6 +104,18 @@ console.log('%c' + MENSAGEM, 'background: ' + color);
 - Imprime `errow` no console, caso seja `error`;
 - Imprime `status inválido` caso não seja nenhum dos status acima.
 
+```js
+const string = '[success] qualquer texto';
+
+if (string.startsWith('[success]') || string.startsWith('[warning]')) {
+    console.log('tudo certo');
+} else if (string.startsWith('[error]')) {
+    console.log('errow')
+} else {
+    console.log('status invalido')
+}
+```
+
 ## Laços de Repetição
 
 1) Escreva um script que lista todos os dados do array `['Lora', 'Logan', 'LeBeau']`.
