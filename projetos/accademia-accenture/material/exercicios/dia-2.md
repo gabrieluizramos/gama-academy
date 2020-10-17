@@ -4,6 +4,15 @@
 
 1) Dado o array `[1, 2, 3, 4, 5, 6]`, escreva um programa que retorna um novo array, contendo somente os valores pares, nesse caso, deverá retornar `[2, 4, 6]`. Dica: operador de módulo `%` pode ajudar nessa tarefa.
 
+```js
+const array = [1, 2, 3, 4, 5, 6];
+const pares = array.filter(function (valor) {
+    return valor % 2 === 0
+});
+
+console.log(pares);
+```
+
 2) Escreva um script que exibe uma mensagem customizada dependendo do status de um pedido. Seguindo o exemplo:
 ```js
 const MENSAGEM = 'Qualquer texto';
@@ -14,9 +23,9 @@ const CORES = {
     GREEN: '#00FF00'
 };
 
-const status1 = 'success';
-const status2 = 'warning';
-const status3 = 'error';
+const SUCCESS = 'success';
+const WARNING = 'warning';
+const ERROR = 'error';
 
 // exibirá a cor CORES.GREEN se o status for success
 // exibirá a cor CORES.YELLOW se o status for warn
@@ -25,12 +34,70 @@ const status3 = 'error';
 ```
 Dica: para customizar o `console.log` basta colocar `%c` no início da mensagem e, como segundo valor, informar alguma regra de CSS. Por exemplo:
 ```js
-console.log('%c Esse texto é customizado', 'background: tomato;')
+console.log('%c Esse texto é customizado', 'background: tomato;');
 ```
 
 Resolva esse exercício com:
 - if/else;
+
+```js
+const MENSAGEM = 'Qualquer texto';
+const STATUS = 'success';
+
+const CORES = {
+    RED: '#ff0000',
+    YELLOW: '#fff000',
+    GREEN: '#00FF00'
+};
+
+const SUCCESS = 'success';
+const WARNING = 'warning';
+const ERROR = 'error';
+
+let color;
+if (STATUS === SUCCESS) {
+    color = CORES.GREEN;
+} else if (STATUS === WARNING) {
+    color = CORES.YELLOW;
+} else if (STATUS === ERROR) {
+    color = CORES.RED;
+}
+
+console.log('%c' + MENSAGEM, 'background: ' + color);
+```
+
 - switch/case.
+
+```js
+const MENSAGEM = 'Qualquer texto';
+const STATUS = 'success';
+
+const CORES = {
+    RED: '#ff0000',
+    YELLOW: '#fff000',
+    GREEN: '#00FF00'
+};
+
+const SUCCESS = 'success';
+const WARNING = 'warning';
+const ERROR = 'error';
+
+let color;
+
+switch (STATUS) {
+    case SUCCESS:
+        color = CORES.GREEN;
+        break;
+    case WARNING:
+        color = CORES.YELLOW;
+        break;
+    case ERROR:
+        color = CORES.RED;
+        break;
+}
+
+console.log('%c' + MENSAGEM, 'background: ' + color);
+```
 
 3) Utilizando somente if/else, escreva um programa que, à partir de uma string como `[success] qualquer texto`, tem o seguinte comportamento:
 - Imprime no console `tudo certo` e o status for `success` ou `warning`;
