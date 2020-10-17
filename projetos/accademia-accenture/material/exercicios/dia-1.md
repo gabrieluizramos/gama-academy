@@ -179,6 +179,16 @@ console.log(mensagensFormatadas);
 
 7) Dado o array `['Lora', 'Logan', 'LeBeau', 'Outro']` escreva um programa que retorna um array com todos os nomes que iniciam com `L`.
 
+```js
+const array = ['Lora', 'Logan', 'LeBeau', 'Outro'];
+
+const arrayFiltrado = array.filter(function (nome) {
+    return nome.startsWith('L');
+});
+
+console.log(arrayFiltrado);
+```
+
 ## Objetos
 
 Dado o seguinte objeto:
@@ -196,6 +206,20 @@ const pessoa = {
 
 1) Exiba suas chaves;
 
+```js
+console.log(Object.keys(pessoa));
+```
+
 2) Troque a string `Qual será o próximo` pra `Chega, já tá bom né`;
 
+```js
+pessoa.gatos[pessoa.gatos.length - 1] = 'Chega, já tá bom né';
+console.log(pessoa);
+```
+
 3) Remova a string `Chega, já tá bom né` e deixa somente os valores restantes no array.
+
+```js
+pessoa.gatos.pop();
+console.log(pessoa);
+```
