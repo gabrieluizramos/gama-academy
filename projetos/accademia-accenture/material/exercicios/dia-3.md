@@ -4,12 +4,15 @@
 
 1) Na tag form abaixo, complete o código para conter:
 - 1 input do tipo texto;
-- 1 input do tipo senha;
 - 1 input do tipo email;
+- 1 input do tipo senha.
 
 Todos os inputs devem possuir seus devidos placeholders.
 ```html
-<form>
+<form name="cadastro">
+    <input type="text" name="usuario" placeholder="Digite seu nome de usuário">
+    <input type="email" name="email" placeholder="seu@email.com">
+    <input type="password" name="senha" placeholder="Sua senha super secreta">
 </form>
 ```
 
@@ -57,7 +60,7 @@ const validaFormulario = (inputs) => {
 validaFormulario([
     {
         type: 'text',
-        name: 'username',
+        name: 'usuario',
         value: 'gabrieluizramos'
     },
     {
@@ -67,7 +70,7 @@ validaFormulario([
     },
     {
         type: 'email',
-        name: 'usuario',
+        name: 'email',
         value: 'abc@1234.com.br'
     }
 ]);
@@ -86,7 +89,7 @@ validaFormulario([
     },
     {
         type: 'email',
-        name: 'E-mail',
+        name: 'email',
         value: 'abc@1234'
     }
 ])
