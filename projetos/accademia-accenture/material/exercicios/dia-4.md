@@ -3,28 +3,29 @@
 ## Callbacks
 
 1) Em teoria, o que são callbacks?
+São funções executadas em um momento futuro, geralmente ligadas à código assíncrono.
 
 2) Como adaptar a função abaixo para receber um callback que será executado com o resultado da operação ao invés de fazer um `alert`?
 ```js
-const computacaoMuitoCustosa = () => {
+const computacaoMuitoCustosa = (callback) => {
     const superCalculo = 1 + 2;
-    alert(superCaulco)
+    callback(superCalculo);
 }
 
-computacaoMuitoCustosa();
+computacaoMuitoCustosa(resultado => alert('resultado', resultado));
 ```
-
 
 ## Métodos HTTP
 
 1) Resuma os métodos HTTP:
-- GET
-- POST
-- PUT
-- DELETE
-- PATCH
+- GET: para consulta de registros
+- POST: para criação de registros
+- PUT: para atualizar um registro de forma inteira
+- DELETE: para remover um registro
+- PATCH: para atualizar um registro de forma parcial
 
 2) O que são e para que servem os Status Codes em HTTP?
+Dar visibilidade à um cliente sobre o estado de uma operação utilizando um código padronizado.
 
 ## Comunicações AJAX
 
