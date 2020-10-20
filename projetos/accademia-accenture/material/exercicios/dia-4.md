@@ -42,13 +42,23 @@ computacaoMuitoCustosa();
 
 3) Qual a diferença entre utilizar Promise de maneira `thenable` (com `.then`) ou com `async/await`?
 
-4) Qual a diferença dos estados de uma Promise (`pending`, `fulfilled` e `rejected`)?
+4) Qual a diferença dos estados de uma Promise (`pending`, `fulfilled` e `rejected`)? O que faz uma Promise mudar seu estado?
 
 ## Single Page Applications
 
 1) O que é uma SPA?
 
 2) Qual a principal diferença de uma SPA para uma aplicação mais "tradicional"? Como elas trafegam dados entre o cliente e o servidor?
+
+## Web Components
+
+1) Essencialmente, o que são Web Components?
+
+2) Você precisa de algum framework/biblioteca para aplicar componentização em uma interface? Por quê?
+
+## Funções como componentes
+
+1) Pra brincar um pouco com React: crie um projeto utilizando `create-react-app` e, dentro desse projeto, crie um botão que dispare um `alert`.
 
 ## Node e NPM
 
@@ -77,17 +87,6 @@ computacaoMuitoCustosa();
 2) Como você instala o `Babel` em um projeto? De que maneiras podemos utilizá-lo?
 
 3) Crie um projeto vazio utilizando `npm` e instale o `Babel` para rodar à partir da CLI e transpilar seu projeto.
-
-## Web Components
-
-1) Essencialmente, o que são Web Components?
-
-2) Você precisa de algum framework/biblioteca para aplicar componentização em uma interface? Por quê?
-
-## Funções como componentes
-
-1) Pra brincar um pouco com React: crie um projeto utilizando `create-react-app` e, dentro desse projeto, crie um botão que dispare um `alert`.
-
 
 ## Console
 
