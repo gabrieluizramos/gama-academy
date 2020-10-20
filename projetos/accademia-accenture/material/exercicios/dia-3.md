@@ -197,20 +197,37 @@ validaFormulario([
 
 1) Atualize as funções de validação abaixo para utilizar desestruturação nos seus parâmetros de `input`:
 ```js
-const validaQuantidade = (input, minimo = 6) => {
-    const ehValido = input.value.trim().length >= minimo;
+// const validaQuantidade = (input, minimo = 6) => {
+//     const ehValido = input.value.trim().length >= minimo;
+
+//     if (!ehValido) {
+//         return 'O campo '+ input.name + ' deve conter no mínimo ' + minimo  + ' caracteres';
+//     }
+// }
+
+// const validaEmail = (input) => {
+//     const regexp = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+//     const ehValido = regexp.test(input.value);
+
+//     if (!ehValido) {
+//         return 'O campo ' + input.name + ' não é válido';
+//     }
+// }
+
+const validaQuantidade = ({ value, name }, minimo = 6) => {
+    const ehValido = value.trim().length >= minimo;
 
     if (!ehValido) {
-        return 'O campo '+ input.name + ' deve conter no mínimo ' + minimo  + ' caracteres';
+        return `O campo ${name} deve conter no mínimo ${minimo} caracteres`;
     }
 }
 
-const validaEmail = (input) => {
+const validaEmail = ({ value, name }) => {
     const regexp = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
-    const ehValido = regexp.test(input.value);
+    const ehValido = regexp.test(value);
 
     if (!ehValido) {
-        return 'O campo ' + input.name + ' não é válido';
+        return `O campo ${name} não é válido`;
     }
 }
 ```
@@ -230,15 +247,32 @@ console.log(`a = ${a}, b = ${b}`);
 
 Como podemos fazer isso sem criar a variável `aux`, somente utilizando desestruturação?
 
+```js
+let a = 1;
+let b = 2;
+
+[b, a] = [a, b];
+
+console.log(`a = ${a}, b = ${b}`);
+```
+
 ## Spread/Rest
 
 1) Spread/Rest são muito parecidos, já que utilizam os mesmo caracteres. Cite uma diferença entre eles.
 
+`spread` é pra distribuir valores em um novo objeto/array e o `rest` é para pegar o restante dos valores de um objeto/array.
+
 2) Como aplicar Rest para receber qualquer quantidade de parâmetro na função abaixo?
 ```js
-const funcao = (a, b) => {
-    console.log(a);
-    console.log(b);
+// const funcao = (a, b) => {
+//     console.log(a);
+//     console.log(b);
+// };
+
+const funcao = (...args) => {
+    args.forEach(arg => {
+        console.log(arg);
+    })
 };
 
 funcao(1, 2, 3, 4, 5, 6)
@@ -256,46 +290,9 @@ const detalhes = {
     sobrenome: 'Qualquer',
     bio: 'Uma pessoa qualquer',
 };
+
+const pessoa = {
+    ...usuario,
+    ...detalhes
+};
 ```
-
-## Callbacks
-
-1) Em teoria, o que são callbacks?
-
-2) Como adaptar a função abaixo para receber um callback que será executado com o resultado da operação ao invés de fazer um `alert`?
-```js
-const computacaoMuitoCustosa = () => {
-    const superCalculo = 1 + 2;
-    alert(superCaulco)
-}
-
-computacaoMuitoCustosa();
-```
-
-
-## Métodos HTTP
-
-1) Resuma os métodos HTTP:
-- GET
-- POST
-- PUT
-- DELETE
-- PATCH
-
-## Comunicações AJAX
-
-1) Faça uma chamada para a API `https://jsonplaceholder.typicode.com/users` e liste todos os usuários no console:
-- Utilizando XHR (**dica**: utilize a função `JSON.parse` para converter os dados de um texto para objeto JavaScript);
-- Utilizando Fetch.
-
-## Promises
-
-1) Converta a chamada HTTP usando `XHR` do exercício anterior para Promise, chamada `meuFetch`, simulando o fetch que usamos no exercício anterior.
-
-2) Utilizando Fetch, faça uma chamada para a API `https://jsonplaceholder.typicode.com/users` e liste todos os usuários no console.
-- Realizando as tratativas para caso de erro;
-- Depois, adapte o código para utilizar Async/Await.
-
-3) Qual a diferença entre utilizar Promise de maneira `thenable` (com `.then`) ou com `async/await`?
-
-4) Qual a diferença dos estados de uma Promise (`pending`, `fulfilled` e `rejected`)?

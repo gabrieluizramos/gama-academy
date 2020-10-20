@@ -1,5 +1,47 @@
 # Dia 4
 
+## Callbacks
+
+1) Em teoria, o que são callbacks?
+
+2) Como adaptar a função abaixo para receber um callback que será executado com o resultado da operação ao invés de fazer um `alert`?
+```js
+const computacaoMuitoCustosa = () => {
+    const superCalculo = 1 + 2;
+    alert(superCaulco)
+}
+
+computacaoMuitoCustosa();
+```
+
+
+## Métodos HTTP
+
+1) Resuma os métodos HTTP:
+- GET
+- POST
+- PUT
+- DELETE
+- PATCH
+
+## Comunicações AJAX
+
+1) Faça uma chamada para a API `https://jsonplaceholder.typicode.com/users` e liste todos os usuários no console:
+- Utilizando XHR (**dica**: utilize a função `JSON.parse` para converter os dados de um texto para objeto JavaScript);
+- Utilizando Fetch.
+
+## Promises
+
+1) Converta a chamada HTTP usando `XHR` do exercício anterior para Promise, chamada `meuFetch`, simulando o fetch que usamos no exercício anterior.
+
+2) Utilizando Fetch, faça uma chamada para a API `https://jsonplaceholder.typicode.com/users` e liste todos os usuários no console.
+- Realizando as tratativas para caso de erro;
+- Depois, adapte o código para utilizar Async/Await.
+
+3) Qual a diferença entre utilizar Promise de maneira `thenable` (com `.then`) ou com `async/await`?
+
+4) Qual a diferença dos estados de uma Promise (`pending`, `fulfilled` e `rejected`)?
+
 ## Single Page Applications
 
 1) O que é uma SPA?
