@@ -24,6 +24,8 @@ computacaoMuitoCustosa();
 - DELETE
 - PATCH
 
+2) O que são e para que servem os Status Codes em HTTP?
+
 ## Comunicações AJAX
 
 1) Faça uma chamada para a API `https://jsonplaceholder.typicode.com/users` e liste todos os usuários no console:
