@@ -45,7 +45,6 @@ O `addEventListener` é mais customizável e também permite atribuição da mú
 
 3) Vamos criar uma validação para esse formulário! Crie um objeto chamado `validacoes` que deverá conter como `chave` os tipos dos campos que criamos anteriormente (`text`, `email` e `password`). Para cada uma dessas chaves, conterá como `valor` um array onde conterá algumas funções de validação já pre-estabelecidas, criadas abaixo. Após isso crie uma função `validaFormulario` que receberá um parâmetro `campos`. Esse parâmetro deverá ser um array contendo cada um dos campos do formulário criado.
 
-
 ```js
 const validaQuantidade = (input, minimo = 6) => {
     const ehValido = input.value.trim().length >= minimo;
@@ -68,13 +67,26 @@ const validaEmail = (input) => {
 // Todos os campos devem aplicar a função validaQuantidade como validação
 // O campo email, deve aplicar também a função validaEmail
 const validacoes = {
-    // preencha o objeto com as validações  
+    // preencha o objeto com as validações
+    text: [validaQuantidade],
+    email: [validaQuantidade, validaEmail],
+    password: [validaQuantidade]
 };
 
 const validaFormulario = (inputs) => {
     // crie a função de validação
     // ela deverá, para cada campo do objeto inputs
     // executar suas devidas validações e mostre no console as validações após sua execução
+    const aposValidacao = inputs.map(input => {
+       const funcoesDeValidacao = validacoes[input.type];
+       const validados = funcoesDeValidacao
+        .map(funcao => funcao(input))
+        .filter(value => value);
+
+       return validados;
+    });
+
+    console.log(aposValidacao);
 };
 
 // não deverá exibir erro
@@ -113,10 +125,73 @@ validaFormulario([
         name: 'email',
         value: 'abc@1234'
     }
-])
+]);
 ```
 
 4) Após finalizar essa função, vamos atribuí-la ao formulário criado.
+
+```html
+<form name="cadastro">
+    <input type="text" name="usuario" placeholder="Digite seu nome de usuário">
+    <input type="email" name="email" placeholder="seu@email.com">
+    <input type="password" name="senha" placeholder="Sua senha super secreta">
+    <button>
+        enviar
+    </button>
+</form>
+
+<script>
+    const validaQuantidade = (input, minimo = 6) => {
+        const ehValido = input.value.trim().length >= minimo;
+
+        if (!ehValido) {
+            return `O campo ${input.name} deve conter no mínimo ${minimo} caracteres`;
+        }
+    }
+
+    const validaEmail = (input) => {
+        const regexp = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+        const ehValido = regexp.test(input.value);
+
+        if (!ehValido) {
+            return `O campo ${input.name} não é válido`;
+        }
+    }
+
+    const validacoes = {
+        text: [validaQuantidade],
+        email: [validaQuantidade, validaEmail],
+        password: [validaQuantidade]
+    };
+
+    const validaFormulario = (inputs) => {
+        const aposValidacao = inputs.map(input => {
+        const funcoesDeValidacao = validacoes[input.type];
+        const validados = funcoesDeValidacao
+            .map(funcao => funcao(input))
+            .filter(value => value);
+
+        return validados;
+        });
+
+        return aposValidacao;
+    };
+
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const campos = [
+            cadastro.usuario,
+            cadastro.email,
+            cadastro.senha
+        ];
+        
+        const validados = validaFormulario(campos);
+        console.log(validados);
+    });
+</script>
+```
 
 ## Desestruturação
 
@@ -187,7 +262,7 @@ const detalhes = {
 
 1) Em teoria, o que são callbacks?
 
-2) Como adaptar a função abaixo para receber um callback que será executado com o resultado da operação ao invés de fazer um `console.log`?
+2) Como adaptar a função abaixo para receber um callback que será executado com o resultado da operação ao invés de fazer um `alert`?
 ```js
 const computacaoMuitoCustosa = () => {
     const superCalculo = 1 + 2;
