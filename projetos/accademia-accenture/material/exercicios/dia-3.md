@@ -22,6 +22,26 @@ Todos os inputs devem possuir seus devidos placeholders.
 O `addEventListener` é mais customizável e também permite atribuição da múltiplas funções para um mesmo evento, o que não ocorre com o `onclick`. Entretanto, o `onclick` é um pouco mais simples e exige menos caracteres a serem digitados, podendo servir bem para uma rápida prototipação, mesmo o `addEventListener` nos permitindo mais customizações.
 
 2) Na estrutura HTML que foi criada acima. Atribua um evento para que, ao disparar o formulário, a página não seja recarregada e exiba todos os dados informados no console.
+```html
+<form name="cadastro">
+    <input type="text" name="usuario" placeholder="Digite seu nome de usuário">
+    <input type="email" name="email" placeholder="seu@email.com">
+    <input type="password" name="senha" placeholder="Sua senha super secreta">
+    <button>
+        enviar
+    </button>
+</form>
+
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log('Usuario', cadastro.usuario.value);
+        console.log('Email', cadastro.email.value);
+        console.log('Senha', cadastro.senha.value);
+    });
+</script>
+```
 
 3) Vamos criar uma validação para esse formulário! Crie um objeto chamado `validacoes` que deverá conter como `chave` os tipos dos campos que criamos anteriormente (`text`, `email` e `password`). Para cada uma dessas chaves, conterá como `valor` um array onde conterá algumas funções de validação já pre-estabelecidas, criadas abaixo. Após isso crie uma função `validaFormulario` que receberá um parâmetro `campos`. Esse parâmetro deverá ser um array contendo cada um dos campos do formulário criado.
 
