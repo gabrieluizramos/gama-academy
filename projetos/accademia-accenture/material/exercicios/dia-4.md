@@ -33,6 +33,24 @@ Dar visibilidade à um cliente sobre o estado de uma operação utilizando um c�
 - Utilizando XHR (**dica**: utilize a função `JSON.parse` para converter os dados de um texto para objeto JavaScript);
 - Utilizando Fetch.
 
+```js
+const URL = 'https://jsonplaceholder.typicode.com/users';
+
+// Com XHR
+const XHR = new XMLHttpRequest();
+XHR.onload = function () {
+    console.log(this.response);
+};
+XHR.responseType = 'json'; // ou convertendo com JSON.parse o this.responseText
+XHR.open("GET", URL);
+XHR.send();
+
+// Com fetch
+fetch(URL)
+.then(response => response.json())
+.then(console.log);
+```
+
 ## Promises
 
 1) Converta a chamada HTTP usando `XHR` do exercício anterior para Promise, chamada `meuFetch`, simulando o fetch que usamos no exercício anterior.
