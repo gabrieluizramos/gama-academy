@@ -19,6 +19,7 @@ Todos os inputs devem possuir seus devidos placeholders.
 ## Eventos
 
 1) Quando se é preferível atribuir eventos através de `addEventListener` e quando se deve utilizar os atributos como `onclick`?
+O `addEventListener` é mais customizável e também permite atribuição da múltiplas funções para um mesmo evento, o que não ocorre com o `onclick`. Entretanto, o `onclick` é um pouco mais simples e exige menos caracteres a serem digitados, podendo servir bem para uma rápida prototipação, mesmo o `addEventListener` nos permitindo mais customizações.
 
 2) Na estrutura HTML que foi criada acima. Atribua um evento para que, ao disparar o formulário, a página não seja recarregada e exiba todos os dados informados no console.
 
@@ -30,7 +31,7 @@ const validaQuantidade = (input, minimo = 6) => {
     const ehValido = input.value.trim().length >= minimo;
 
     if (!ehValido) {
-        return 'O campo '+ input.name + ' deve conter no mínimo ' + minimo  + ' caracteres';
+        return `O campo ${input.name} deve conter no mínimo ${minimo} caracteres`;
     }
 }
 
@@ -39,7 +40,7 @@ const validaEmail = (input) => {
     const ehValido = regexp.test(input.value);
 
     if (!ehValido) {
-        return 'O campo ' + input.name + ' não é válido';
+        return `O campo ${input.name} não é válido`;
     }
 }
 
