@@ -75,10 +75,6 @@ fetch(URL)
 
 2) Você precisa de algum framework/biblioteca para aplicar componentização em uma interface? Por quê?
 
-## Funções como componentes
-
-1) Pra brincar um pouco com React: crie um projeto utilizando `create-react-app` e, dentro desse projeto, crie um botão que dispare um `alert`.
-
 ## Node e NPM
 
 1) Conceitualmente, o que é o `Node`, o `NPM` e o `NPX`?
