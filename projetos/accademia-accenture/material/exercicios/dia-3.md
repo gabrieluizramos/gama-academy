@@ -55,7 +55,7 @@ const validaQuantidade = (input, minimo = 6) => {
 }
 
 const validaEmail = (input) => {
-    const regexp = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
+    const regexp = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
     const ehValido = regexp.test(input.value);
 
     if (!ehValido) {
