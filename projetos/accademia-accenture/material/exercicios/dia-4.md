@@ -3,6 +3,7 @@
 ## Callbacks
 
 1) Em teoria, o que são callbacks?
+
 São funções executadas em um momento futuro, geralmente ligadas à código assíncrono.
 
 2) Como adaptar a função abaixo para receber um callback que será executado com o resultado da operação ao invés de fazer um `alert`?
@@ -25,6 +26,7 @@ computacaoMuitoCustosa(resultado => alert('resultado', resultado));
 - PATCH: para atualizar um registro de forma parcial
 
 2) O que são e para que servem os Status Codes em HTTP?
+
 Dar visibilidade à um cliente sobre o estado de uma operação utilizando um código padronizado.
 
 ## Comunicações AJAX
@@ -53,7 +55,7 @@ fetch(URL)
 
 ## Promises
 
-1) Converta a chamada HTTP usando `XHR` do exercício anterior para Promise, chamada `meuFetch`, simulando o fetch que usamos no exercício anterior.
+1) Crie uma função chamada `meuFetch` que utiliza `XHR` e aplica uma `Promise` simulando a função `fetch` que usamos anteriormente.
 
 2) Utilizando Fetch, faça uma chamada para a API `https://jsonplaceholder.typicode.com/users` e liste todos os usuários no console.
 - Realizando as tratativas para caso de erro;
