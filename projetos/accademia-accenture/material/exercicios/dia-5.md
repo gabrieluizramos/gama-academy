@@ -4,13 +4,21 @@
 
 1) O que é uma SPA?
 
+Uma forma diferente da tradicional de se trabalhar com aplicações. Ao invés de ficar recarregando a página a cada requisição (ou seja, a cada resposta de um servidor), agora temos uma página que carrega uma única vez e trafega dados utilizando AJAX. Isso não quer dizer que a aplicação só terá única tela/página. Podemos ter várias telas ou páginas diferentes e trabalhar com rotas na nossa aplicação, mesmo utilizando SPA.
+
 2) Qual a principal diferença de uma SPA para uma aplicação mais "tradicional"? Como elas trafegam dados entre o cliente e o servidor?
+
+Ler resposta 1. 
 
 ## Web Components
 
 1) Essencialmente, o que são Web Components?
 
+É uma série de especificações que visa tornar componentes na web reutilizáveis independente de frameworks.
+
 2) Você precisa de algum framework/biblioteca para aplicar componentização em uma interface? Por quê?
+
+Não. Componentizar é basicamente o esforço de definir limites claros para componentes de interface, isso quer dizer, separar as responsabilidades de cada bloco dentro de uma aplicação front-end.
 
 ## Node e NPM
 
@@ -22,11 +30,9 @@
 
 4) Como criar uma rotina customizada usando `npm`?
 
-5) Crie um projeto vazio utilizando `npm`.
-
 ## Yarn
 
-1) Qual a diferença entre o `Yarn` e o` NPM`?
+1) Qual a diferença entre o `Yarn` e o `NPM`?
 
 2) Como funcionam os `workspaces`?
 
@@ -38,14 +44,8 @@
 
 2) Como você instala o `Babel` em um projeto? De que maneiras podemos utilizá-lo?
 
-3) Crie um projeto vazio utilizando `npm` e instale o `Babel` para rodar à partir da CLI e transpilar seu projeto.
+## Webpack
 
-## Console
+1) O que é o `Webpack`? Qual sua funcionalidade?
 
-1) Escreva um programa que exibe uma mensagem `iniciando contagem` e começa um contador de tempo. Após isso, esse programa deverá rodar um laço de repetição qualquer indo de 0 até 100 e depois finalizar a contagem, exibindo o tempo total do contador de tempo.
-
-## Debugging
-
-1) Para que é utilizada a declaração `debugger;` em um arquivo JavaScript?
-
-2) O que são e para que servem source-maps?
+2) Como indicar ao `Webpack` como lidar com arquivos em formatos que não são JS (por exemplo SCSS ou imagens)?
