@@ -8,6 +8,7 @@ Conteúdo apresentado e discutido ao longo dos projetos [Gama Experience](https:
 - [xp-34](./xp-34)
 - [xp-35](./xp-35)
 - [xp-36](./xp-36)
+- [xp-37](./xp-37)
 
 ### Outros
 - [talks](./talks)
