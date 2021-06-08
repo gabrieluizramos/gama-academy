@@ -1,14 +1,16 @@
 {
-  "name": "gama-xp-37-ts",
+  "name": "mini-projeto",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
+  "keywords": [],
   "author": "Gabriel Ramos <gabriel.luiz.ramos@gmail.com> (https://gabrieluizramos.com.br/)",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.2"
   }
 }
